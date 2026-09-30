@@ -1,0 +1,24 @@
+2026-09-30 19:54:47 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"roomsInfo":[{"adultsCount":2,"kidsAges":[]}],"checkIn":"2026-10-25","checkOut":"2026-10-26","query":"Dubai"}
+2026-09-30 19:54:48 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 200
+2026-09-30 19:54:48 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"cache":false,"sId":"01a0f2b4-2c0d-7f47-a379-57fac7a0044e"}
+2026-09-30 21:07:20 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"cityId":1,"checkIn":"2026-10-10","checkOut":"2026-10-15","roomsInfo":[{"adultsCount":2,"kidsAges":[5,8]},{"adultsCount":1,"kidsAges":[]}]}
+2026-09-30 21:07:21 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 400
+2026-09-30 21:07:21 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"timestamp":"2026-09-30T15:37:22.361+00:00","path":"/search/async","status":400,"error":"Bad Request","requestId":"18d812a7-9992824","traceId":"f1d6a85400019d601d39128efeec7e59","serviceName":"hotel-core-service","errorCodes":["1004"],"errorType":"Validation error","code":106}
+2026-09-30 21:08:00 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"cityId":1,"checkIn":"2026-10-10","checkOut":"2026-10-15","roomsInfo":[{"adultsCount":2,"kidsAges":[5,8]},{"adultsCount":1,"kidsAges":[]}]}
+2026-09-30 21:08:02 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 405
+2026-09-30 21:08:02 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"timestamp":"2026-09-30T15:38:02.513+00:00","path":"/api/enigma/content/hotels/summaries","status":405,"error":"Method Not Allowed","requestId":"1a9a9c1e-20390589"}
+2026-09-30 21:09:57 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"cityId":1,"checkIn":"2026-10-10","checkOut":"2026-10-15","roomsInfo":[{"adultsCount":2,"kidsAges":[5,8]},{"adultsCount":1,"kidsAges":[]}]}
+2026-09-30 21:09:57 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 405
+2026-09-30 21:09:57 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"timestamp":"2026-09-30T15:39:58.482+00:00","path":"/api/enigma/content/hotels/summaries","status":405,"error":"Method Not Allowed","requestId":"af70d988-20393192"}
+2026-09-30 21:10:33 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"cityId":1,"checkIn":"2026-10-10","checkOut":"2026-10-15","roomsInfo":[{"adultsCount":2,"kidsAges":[5,8]}]}
+2026-09-30 21:10:34 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 405
+2026-09-30 21:10:34 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"timestamp":"2026-09-30T15:40:35.183+00:00","path":"/api/enigma/content/hotels/summaries","status":405,"error":"Method Not Allowed","requestId":"418d9c86-27960708"}
+2026-09-30 21:12:32 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"cityId":1,"checkIn":"2026-10-10","checkOut":"2026-10-15","roomsInfo":[{"adultsCount":2,"kidsAges":[5,8]}]}
+2026-09-30 21:12:33 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 200
+2026-09-30 21:12:33 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"carousels":[]}
