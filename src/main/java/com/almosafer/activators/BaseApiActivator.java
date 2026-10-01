@@ -119,7 +119,7 @@ public class BaseApiActivator {
 	            .ignoreIfMissing() // don't crash if .env isn't present (e.g. in CI, which uses real env vars instead)
 	            .load();
 
-	    private String getDefaultAuthTokenViaEnvFile() {
+	    protected String getDefaultAuthTokenViaEnvFile() {
 	        // Prefer a real OS/CI environment variable if present, fall back to .env for local dev
 	        String token = System.getenv("ALMOSAFER_API_TOKEN");
 	        if (token != null && !token.isBlank()) {

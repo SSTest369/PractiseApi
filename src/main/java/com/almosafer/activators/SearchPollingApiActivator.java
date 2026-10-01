@@ -31,7 +31,7 @@ public class SearchPollingApiActivator extends BaseApiActivator {
 		return pollUntilSearchComplete();
 	}
 
-	public Response oldPollUntilSearchComplete() {
+	public Response pollUntilSearchComplete() {
 		Response response;
 		String searchStatus;
 		do {
@@ -47,7 +47,7 @@ public class SearchPollingApiActivator extends BaseApiActivator {
 		return response;
 	}
 
-	public Response pollUntilSearchComplete() {
+	public Response newpollUntilSearchComplete() {
 
 	    int maxAttempts = 10;
 	    int pollingInterval = 1000;

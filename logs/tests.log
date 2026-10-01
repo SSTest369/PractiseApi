@@ -1,8 +1,10 @@
-2026-10-01 08:51:21 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
-{"roomsInfo":[{"adultsCount":2,"kidsAges":[]}],"checkIn":"2026-10-25","checkOut":"2026-10-26","query":"Dubai"}
-2026-10-01 08:51:23 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 400
-2026-10-01 08:51:23 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"code":5001,"message":"App is not authorized! - UNAUTHORIZED APP: x-Authorization missing","type":"UNAUTHORIZED"}
-2026-10-01 08:51:23 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
-{"roomsInfo":[{"adultsCount":2,"kidsAges":[]}],"checkIn":"2026-10-25","checkOut":"2026-10-26","query":"London"}
-2026-10-01 08:51:23 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 400
-2026-10-01 08:51:23 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"message":"App is not authorized! - UNAUTHORIZED APP: x-Authorization missing","type":"UNAUTHORIZED","code":5001}
+2026-10-01 12:51:45 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"roomsInfo":[{"adultsCount":2,"kidsAges":[]}],"checkIn":"2026-10-31","checkOut":"2026-11-02","query":"Dubai"}
+2026-10-01 12:51:46 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 200
+2026-10-01 12:51:46 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"cache":true,"sId":"01a0f654-88f8-7a9f-b6c4-3f159090fe48"}
+2026-10-01 12:51:46 [main] INFO  com.almosafer.activators.BaseApiActivator - Request body is:
+{"sId":"01a0f654-88f8-7a9f-b6c4-3f159090fe48","packagesRequest":{"hotelId":145333}}
+2026-10-01 12:51:47 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 200
+2026-10-01 12:51:47 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"hotelId":145333,"initialDelayInMillis":0,"pId":"no-pkg-sid-01a0f654-88f8-7a9f-b6c4-3f159090fe48","sId":"01a0f654-88f8-7a9f-b6c4-3f159090fe48"}
+2026-10-01 12:51:47 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE STATUS: 200
+2026-10-01 12:51:47 [main] INFO  com.almosafer.activators.BaseApiActivator - RESPONSE BODY: {"pollingStatus":"COMPLETED_SUCCESSFULLY","numberOfGroups":0,"numberOfPackages":0,"hotelId":0,"hotelCountryCode":null,"posCountryCode":null,"currencyCode":null,"numberOfNights":0,"filters":null,"packagesGroups":null,"additionalData":null,"searchResult":null,"config":null,"sessionCreatedAt":null,"sessionExpiredAt":null,"delayInMillis":0,"hasRewards":true,"pId":"no-pkg-sid-01a0f654-88f8-7a9f-b6c4-3f159090fe48","sId":"01a0f654-88f8-7a9f-b6c4-3f159090fe48"}
