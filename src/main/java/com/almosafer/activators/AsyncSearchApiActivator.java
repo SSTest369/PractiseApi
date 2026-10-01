@@ -35,7 +35,7 @@ public class AsyncSearchApiActivator extends BaseApiActivator {
     public Response sendPostRequest(SearchRequest body) {
         Map<String, String> headerMap = new HashMap<>();
         headerMap.put("Content-Type", "application/json");
-        headerMap.put(TOKEN, "skdjfh73273$7268u2j89s");
+        //headerMap.put(TOKEN, "skdjfh73273$7268u2j89s");     //Passed token from .prop/.env file directly into BaseApiActivator class
         setHeaders(headerMap);
         setRequestBody(convertPojoToString(body));
         return sendAPIRequest(Method.POST, ASYNC_SEARCH);

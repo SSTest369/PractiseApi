@@ -1,6 +1,8 @@
 package com.almosafer.activators;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.github.cdimascio.dotenv.Dotenv;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.http.Method;
@@ -75,7 +77,8 @@ public class BaseApiActivator {
 		if (requestBody != null)
 			requestSpecs.body(requestBody).contentType(ContentType.JSON);
 
-		Response response = requestSpecs.when().log().all().request(httpMethod, resourceURL);
+		//Added token directly in API request instead of passing in each request
+		Response response = requestSpecs.headers("TOKEN",getDefaultAuthTokenViaEnvFile()).when().log().all().request(httpMethod, resourceURL);
 		logResponse(response);
 		return response;
 	}
@@ -98,7 +101,33 @@ public class BaseApiActivator {
 		}
 		return "";
 	}
+	
+	 private String getDefaultAuthToken() {
+	        Properties props = new Properties();
+	        try (InputStream input = BaseApiActivator.class.getClassLoader().getResourceAsStream("config.properties")) {
+	            if (input != null) {
+	                props.load(input);
+	                return props.getProperty("token");
+	            }
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	        return "";
+	    }
 
+	 private static final Dotenv dotenv = Dotenv.configure()
+	            .ignoreIfMissing() // don't crash if .env isn't present (e.g. in CI, which uses real env vars instead)
+	            .load();
+
+	    private String getDefaultAuthTokenViaEnvFile() {
+	        // Prefer a real OS/CI environment variable if present, fall back to .env for local dev
+	        String token = System.getenv("ALMOSAFER_API_TOKEN");
+	        if (token != null && !token.isBlank()) {
+	            return token;
+	        }
+	        return dotenv.get("ALMOSAFER_API_TOKEN");
+	    }
+	    
 	public void assertThatStatusCodeEquals(Response response, int expectedStatusCode) {
 		Assertions.assertEquals(expectedStatusCode, response.getStatusCode(),
 				"The Status code of the Response is different than expected");
